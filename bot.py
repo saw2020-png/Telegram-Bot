@@ -83,20 +83,26 @@ def find_product(cat_id: str, prod_id: str):
 def build_welcome_text():
     """Build the welcome message text."""
     return (
-        f"🎮 **{SHOP_NAME}** 🎮\n\n"
+        f"━━━━━━━━━━━━━━━━━━━━\n"
+        f"❄️ **{SHOP_NAME}** ❄️\n"
+        f"━━━━━━━━━━━━━━━━━━━━\n\n"
         f"{WELCOME_MESSAGE}\n\n"
-        f"📌 ဝန်ဆောင်မှုများ ကြည့်ရှုရန် အောက်ပါ ခလုတ်ကို နှိပ်ပါ။"
+        f"━━━━━━━━━━━━━━━━━━━━\n"
+        f"📌 အောက်ပါ ခလုတ်များကို နှိပ်၍ ဝန်ဆောင်မှုများ ရယူနိုင်ပါတယ်။\n"
+        f"✅ Admin အစစ်အမှန်: @{ADMIN_USERNAME}"
     )
 
 
 def build_welcome_keyboard():
     """Build the welcome message keyboard."""
     keyboard = [
-        [InlineKeyboardButton("🛒 ဝယ်ယူမည် (Buy)", callback_data="buy")],
+        [InlineKeyboardButton("🛒 အော်ဒါတင်မည်", callback_data="buy")],
+        [InlineKeyboardButton("📋 ဈေးနှုန်းစာရင်း", callback_data="price_list")],
+        [InlineKeyboardButton("💳 ငွေပေးချေနည်း", callback_data="payment_info")],
         [InlineKeyboardButton("📞 Admin ဆက်သွယ်ရန်", url=f"https://t.me/{ADMIN_USERNAME}")],
     ]
     if CHANNEL_USERNAME:
-        keyboard.append([InlineKeyboardButton("📢 Channel", url=f"https://t.me/{CHANNEL_USERNAME}")])
+        keyboard.append([InlineKeyboardButton("📢 Channel ကြည့်ရန်", url=f"https://t.me/{CHANNEL_USERNAME}")])
     return InlineKeyboardMarkup(keyboard)
 
 
@@ -173,6 +179,10 @@ async def callback_router(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if data == "buy":
         await show_categories(query, context)
+    elif data == "price_list":
+        await show_price_list(query, context)
+    elif data == "payment_info":
+        await show_payment_info(query, context)
     elif data == "back_to_categories":
         await show_categories(query, context)
     elif data.startswith("cat|"):
@@ -184,6 +194,58 @@ async def callback_router(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await show_products(query, context, f"cat|{cat_id}")
     elif data == "cancel_order":
         await cancel_order(query, context)
+    elif data == "back_to_main":
+        text = build_welcome_text()
+        keyboard = build_welcome_keyboard()
+        await query.edit_message_text(text=text, reply_markup=keyboard, parse_mode="Markdown")
+
+
+# ─── Payment Info ────────────────────────────────────────────────────────────
+async def show_payment_info(query, context: ContextTypes.DEFAULT_TYPE):
+    """Display payment methods info."""
+    text = f"━━━━━━━━━━━━━━━━━━━━\n"
+    text += f"💳 **ငွေပေးချေနည်းများ**\n"
+    text += f"━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    for pm in PAYMENT_METHODS:
+        text += f"{pm['icon']} **{pm['name']}**\n"
+        text += f"   📱 No: `{pm['pay_no']}`\n"
+        text += f"   👤 Name: {pm['pay_name']}\n\n"
+
+    text += f"━━━━━━━━━━━━━━━━━━━━\n"
+    text += f"📌 အထက်ပါ Pay No တစ်ခုခုသို့ ငွေလွှဲပြီး\n"
+    text += f"📸 Screenshot ကို Bot ထဲ ပို့ပေးပါ။\n\n"
+    text += f"✅ Admin စစ်ဆေးပြီး deliver လုပ်ပေးပါမည်။"
+
+    keyboard = [
+        [InlineKeyboardButton("🛒 အော်ဒါတင်မည်", callback_data="buy")],
+        [InlineKeyboardButton("⬅️ ပြန်သွားမည်", callback_data="back_to_main")],
+    ]
+    await query.edit_message_text(text=text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode="Markdown")
+
+
+# ─── Price List ───────────────────────────────────────────────────────────────
+async def show_price_list(query, context: ContextTypes.DEFAULT_TYPE):
+    """Display full price list."""
+    text = f"━━━━━━━━━━━━━━━━━━━━\n"
+    text += f"📋 **{SHOP_NAME} - ဈေးနှုန်းစာရင်း**\n"
+    text += f"━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    for cat in CATEGORIES:
+        text += f"{cat['name']}\n"
+        for item in cat["items"]:
+            text += f"  ├ {item['name']} ➜ {item['price']}\n"
+        text += "\n"
+
+    text += f"━━━━━━━━━━━━━━━━━━━━\n"
+    text += f"💡 ဝယ်ယူလိုပါက 'အော်ဒါတင်မည်' ခလုတ်ကို နှိပ်ပါ။\n"
+    text += f"✅ Admin: @{ADMIN_USERNAME}"
+
+    keyboard = [
+        [InlineKeyboardButton("🛒 အော်ဒါတင်မည်", callback_data="buy")],
+        [InlineKeyboardButton("⬅️ ပြန်သွားမည်", callback_data="back_to_main")],
+    ]
+    await query.edit_message_text(text=text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode="Markdown")
 
 
 # ─── Step 1: Show Categories ─────────────────────────────────────────────────
