@@ -1,0 +1,207 @@
+{
+  "bot_token": "YOUR_BOT_TOKEN_HERE",
+  "admin_username": "YOUR_ADMIN_USERNAME",
+  "channel_username": "YOUR_CHANNEL_USERNAME",
+  "shop_name": "Your Shop Name",
+  "welcome_message": "မင်္ဂလာပါ! ကျွန်တော်တို့ ဆိုင်မှ ကြိုဆိုပါတယ်။\n\nအောက်ပါ ဝန်ဆောင်မှုများကို ရရှိနိုင်ပါတယ်။",
+  "morning_post_message": "Morning 🌞 ဆိုင်ဖွင့်ပါပြီ",
+  "morning_post_time": "08:00",
+  "payment_methods": [
+    {
+      "name": "KBZ Pay",
+      "icon": "🏦",
+      "pay_no": "09xxxxxxxxx",
+      "pay_name": "Your Name"
+    },
+    {
+      "name": "Wave Pay",
+      "icon": "🌊",
+      "pay_no": "09xxxxxxxxx",
+      "pay_name": "Your Name"
+    },
+    {
+      "name": "UAB Pay",
+      "icon": "🏧",
+      "pay_no": "09xxxxxxxxx",
+      "pay_name": "Your Name"
+    }
+  ],
+  "categories": [
+    {
+      "id": "tiktok_like",
+      "name": "❤️ TikTok Like",
+      "description": "TikTok Like ဝန်ဆောင်မှုများ (1,000 ခုစာ)",
+      "items": [
+        {
+          "id": "tiktok_like_30d",
+          "name": "Like - ရက် ၃၀ warranty (1,000 ခုစာ)",
+          "price": "7,000 ကျပ်",
+          "description": "TikTok Like 1,000 ခု - ရက် ၃၀ warranty"
+        },
+        {
+          "id": "tiktok_like_60d",
+          "name": "Like - ရက် 60 warranty (1,000 ခုစာ)",
+          "price": "8,000 ကျပ်",
+          "description": "TikTok Like 1,000 ခု - ရက် 60 warranty"
+        },
+        {
+          "id": "tiktok_like_365d",
+          "name": "Like - ရက် 365 warranty (1,000 ခုစာ)",
+          "price": "9,000 ကျပ်",
+          "description": "TikTok Like 1,000 ခု - ရက် 365 warranty"
+        },
+        {
+          "id": "tiktok_like_lifetime",
+          "name": "Like - Lifetime warranty (1,000 ခုစာ)",
+          "price": "10,500 ကျပ်",
+          "description": "TikTok Like 1,000 ခု - Lifetime warranty"
+        }
+      ]
+    },
+    {
+      "id": "tiktok_view",
+      "name": "👁️ TikTok View",
+      "description": "TikTok View ဝန်ဆောင်မှုများ (1,000 ခုစာ)",
+      "items": [
+        {
+          "id": "tiktok_view_30d",
+          "name": "Views - ရက် ၃၀ warranty (1,000 ခုစာ)",
+          "price": "5,550 ကျပ်",
+          "description": "TikTok Views 1,000 ခု - ရက် ၃၀ warranty"
+        },
+        {
+          "id": "tiktok_view_60d",
+          "name": "Views - ရက် 60 warranty (1,000 ခုစာ)",
+          "price": "5,600 ကျပ်",
+          "description": "TikTok Views 1,000 ခု - ရက် 60 warranty"
+        },
+        {
+          "id": "tiktok_view_lifetime",
+          "name": "Views - Lifetime warranty (1,000 ခုစာ)",
+          "price": "5,800 ကျပ်",
+          "description": "TikTok Views 1,000 ခု - Lifetime warranty"
+        }
+      ]
+    },
+    {
+      "id": "tiktok_followers",
+      "name": "👥 TikTok Followers",
+      "description": "TikTok Followers ဝန်ဆောင်မှုများ (1,000 ခုစာ)",
+      "items": [
+        {
+          "id": "tiktok_followers_30d",
+          "name": "Followers - ရက် ၃၀ warranty (1,000 ခုစာ)",
+          "price": "15,000 ကျပ်",
+          "description": "TikTok Followers 1,000 ခု - ရက် ၃၀ warranty"
+        },
+        {
+          "id": "tiktok_followers_60d",
+          "name": "Followers - ရက် 60 warranty (1,000 ခုစာ)",
+          "price": "20,000 ကျပ်",
+          "description": "TikTok Followers 1,000 ခု - ရက် 60 warranty"
+        },
+        {
+          "id": "tiktok_followers_lifetime",
+          "name": "Followers - Lifetime warranty (1,000 ခုစာ)",
+          "price": "25,000 ကျပ်",
+          "description": "TikTok Followers 1,000 ခု - Lifetime warranty"
+        }
+      ]
+    },
+    {
+      "id": "tiktok_save_share",
+      "name": "💾 TikTok Save & Share",
+      "description": "TikTok Save & Share ဝန်ဆောင်မှုများ (1,000 ခုစာ)",
+      "items": [
+        {
+          "id": "tiktok_save_lifetime",
+          "name": "Save - Lifetime warranty (1,000 ခုစာ)",
+          "price": "6,000 ကျပ်",
+          "description": "TikTok Save 1,000 ခု - Lifetime warranty"
+        },
+        {
+          "id": "tiktok_share_lifetime",
+          "name": "Share - Lifetime warranty (1,000 ခုစာ)",
+          "price": "6,000 ကျပ်",
+          "description": "TikTok Share 1,000 ခု - Lifetime warranty"
+        }
+      ]
+    },
+    {
+      "id": "facebook",
+      "name": "📘 Facebook Services",
+      "description": "Facebook Likes, Followers, Comments",
+      "items": [
+        {
+          "id": "fb_likes_1k",
+          "name": "Facebook 1,000 Likes",
+          "price": "10,000 ကျပ်",
+          "description": "Facebook page/post မှာ 1,000 likes ရရှိရန်"
+        },
+        {
+          "id": "fb_followers_1k",
+          "name": "Facebook 1,000 Followers",
+          "price": "12,000 ကျပ်",
+          "description": "Facebook page မှာ 1,000 followers ရရှိရန်"
+        }
+      ]
+    },
+    {
+      "id": "instagram",
+      "name": "📸 Instagram Services",
+      "description": "Instagram Likes, Followers",
+      "items": [
+        {
+          "id": "ig_followers_1k",
+          "name": "Instagram 1,000 Followers",
+          "price": "15,000 ကျပ်",
+          "description": "Instagram account မှာ 1,000 followers ရရှိရန်"
+        },
+        {
+          "id": "ig_likes_1k",
+          "name": "Instagram 1,000 Likes",
+          "price": "8,000 ကျပ်",
+          "description": "Instagram post မှာ 1,000 likes ရရှိရန်"
+        }
+      ]
+    },
+    {
+      "id": "youtube",
+      "name": "▶️ YouTube Services",
+      "description": "YouTube Views, Subscribers",
+      "items": [
+        {
+          "id": "yt_views_1k",
+          "name": "YouTube 1,000 Views",
+          "price": "12,000 ကျပ်",
+          "description": "YouTube video မှာ 1,000 views ရရှိရန်"
+        },
+        {
+          "id": "yt_subs_1k",
+          "name": "YouTube 1,000 Subscribers",
+          "price": "25,000 ကျပ်",
+          "description": "YouTube channel မှာ 1,000 subscribers ရရှိရန်"
+        }
+      ]
+    },
+    {
+      "id": "ai_premium",
+      "name": "🤖 AI Premium Products",
+      "description": "ChatGPT, Canva Pro, Premium Accounts",
+      "items": [
+        {
+          "id": "chatgpt_plus",
+          "name": "ChatGPT Plus (1 Month)",
+          "price": "55,000 ကျပ်",
+          "description": "ChatGPT Plus account 1 လ"
+        },
+        {
+          "id": "canva_pro",
+          "name": "Canva Pro (1 Month)",
+          "price": "18,000 ကျပ်",
+          "description": "Canva Pro account 1 လ"
+        }
+      ]
+    }
+  ]
+}
