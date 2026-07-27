@@ -1,11 +1,11 @@
 ﻿{
-  "bot_token": " @Victorygaming_bot ",
+  "bot_token": " 8655243696:AAGr8xeAZ0z8XLk-89FHSv2TejvCskxzYPI ",
   "admin_username": " https://t.me/nicknike11 ",
   "channel_username": " GameVerse Bot ",
-  "shop_name": "Your Shop Name",
+  "shop_name": "@Victorygaming_bot",
   "welcome_message": "မင်္ဂလာပါ! ကျွန်တော်တို့ ဆိုင်မှ ကြိုဆိုပါတယ်။\n\nအောက်ပါ ဝန်ဆောင်မှုများကို ရရှိနိုင်ပါတယ်။",
   "morning_post_message": "Morning 🌞 ဆိုင်ဖွင့်ပါပြီ",
-  "morning_post_time": "08:00",
+  "morning_post_time": "09:00",
   "payment_methods": [
     {
       "name": "KBZ Pay",
