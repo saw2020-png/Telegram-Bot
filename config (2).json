@@ -1,7 +1,7 @@
-{
-  "bot_token": "YOUR_BOT_TOKEN_HERE",
-  "admin_username": "YOUR_ADMIN_USERNAME",
-  "channel_username": "YOUR_CHANNEL_USERNAME",
+﻿{
+  "bot_token": " @Victorygaming_bot ",
+  "admin_username": " https://t.me/nicknike11 ",
+  "channel_username": " GameVerse Bot ",
   "shop_name": "Your Shop Name",
   "welcome_message": "မင်္ဂလာပါ! ကျွန်တော်တို့ ဆိုင်မှ ကြိုဆိုပါတယ်။\n\nအောက်ပါ ဝန်ဆောင်မှုများကို ရရှိနိုင်ပါတယ်။",
   "morning_post_message": "Morning 🌞 ဆိုင်ဖွင့်ပါပြီ",
@@ -10,20 +10,20 @@
     {
       "name": "KBZ Pay",
       "icon": "🏦",
-      "pay_no": "09xxxxxxxxx",
-      "pay_name": "Your Name"
+      "pay_no": "09765151082",
+      "pay_name": "Saw Hmue Naing"
     },
     {
       "name": "Wave Pay",
       "icon": "🌊",
-      "pay_no": "09xxxxxxxxx",
-      "pay_name": "Your Name"
+      "pay_no": "09765151082",
+      "pay_name": " Saw Hmue Naing "
     },
     {
       "name": "UAB Pay",
-      "icon": "🏧",
-      "pay_no": "09xxxxxxxxx",
-      "pay_name": "Your Name"
+      "icon": "",
+      "pay_no": "09765151082",
+      "pay_name": " Saw Hmue Naing "
     }
   ],
   "categories": [
@@ -205,3 +205,4 @@
     }
   ]
 }
+
